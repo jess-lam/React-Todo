@@ -55,8 +55,8 @@ class App extends React.Component {
       todoList: this.state.todoList.map(todo => {
         if (todo.id === id) {
           return {
-            ...todo,
-            completed: !todo.completed
+            ...todos,
+            completed: !todos.completed
           };
         }
         return todo;
@@ -69,7 +69,7 @@ class App extends React.Component {
     const newState = {
       ...this.state,
       todoList: this.state.todoList.filter(todo => {
-        return !todo.completed;
+        return !todos.completed;
       })
     };
     this.setState(newState);
