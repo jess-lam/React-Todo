@@ -56,7 +56,7 @@ class App extends React.Component {
         if (todo.id === id) {
           return {
             ...todos,
-            completed: !todos.completed
+            completed: !todos.completed,
           };
         }
         return todo;
@@ -65,7 +65,7 @@ class App extends React.Component {
     this.setState(newState);
   };
 
-  clearCompleted = () => {
+  /*clearCompleted = () => {
     const newState = {
       ...this.state,
       todoList: this.state.todoList.filter(todo => {
@@ -73,7 +73,7 @@ class App extends React.Component {
       })
     };
     this.setState(newState);
-  };
+  };*/
   // you will need a place to store your state in this component.
   // design `App` to be the parent component of your application.
   // this component is going to take care of state, and any change handlers you need to work with your state
@@ -86,7 +86,7 @@ class App extends React.Component {
         </div>
         <TodoList
           todos={this.state.todoList}
-          toggleCompleted={this.toggleCompleted}
+          toggleCompleted={this.toggleCompleted} 
           clearCompleted={this.clearCompleted} 
           />
       </div>
